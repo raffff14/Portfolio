@@ -1,3 +1,18 @@
+/* First, add the font import at the very top of your CSS file */
+@import url('https://use.typekit.net/[your-kit-code].css'); /* You'll need a valid Adobe Fonts kit code */
+
+/* Alternative: If you have the font files locally */
+@font-face {
+    font-family: 'Futura PT';
+    src: url('path/to/FuturaPT-Book.woff2') format('woff2'),
+         url('path/to/FuturaPT-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Using a similar free font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -6,14 +21,10 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    zoom: 150%; /* For most browsers */
-    -moz-transform: scale(1.5); /* For Firefox */
-    -moz-transform-origin: 0 0;
-    transform: scale(1.5); /* Alternative method */
-    transform-origin: 0 0;
+    background-color: #f5f5f5;
 }
 
 /* Navigation */
@@ -27,9 +38,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    transform: scale(0.67); /* 1/1.5 to counter the body zoom */
-    transform-origin: top left;
-    width: 150%; /* Compensate for the scale */
 }
 
 .logo {
@@ -90,7 +98,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000000;
+    background: #f5f5f5;
 }
 
 .hero-content {
@@ -98,22 +106,21 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 80%; /* Adjust from 1200px to percentage */
-    margin: 0 auto;
+    max-width: 1200px;
     padding: 0 2rem;
     gap: 2rem;
 }
 
 .hero-text {
     text-align: left;
-    color: white;
+    color: #333;
     flex: 1;
 }
 
 .hero-image {
     width: 400px;
     height: 400px;
-    margin-left: 1000px;
+    margin-left: 100px;
 }
 
 .hero-image img {
@@ -172,6 +179,7 @@ nav {
 
 /* Sections */
 section {
+    background: #f5f5f5;
     padding: 5rem 2rem;
 }
 
@@ -184,7 +192,7 @@ h2 {
 .about-content {
     display: flex;
     gap: 2rem;
-    max-width: 80%; /* Adjust from 1200px to percentage */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -225,13 +233,13 @@ h2 {
 }
 
 .project-card {
-    background: #1a1a1a;
+    background: white;
     border-radius: 15px;
     padding: 2rem;
     position: relative;
     overflow: hidden;
     text-decoration: none;
-    color: white;
+    color: #333;
     transition: transform 0.3s ease;
 }
 
@@ -267,7 +275,7 @@ h2 {
 }
 
 .project-card p {
-    color: #888;
+    color: #666;
     margin-bottom: 1.5rem;
     padding: 0;
 }
@@ -280,11 +288,11 @@ h2 {
 }
 
 .project-tech span {
-    background: rgba(255, 255, 255, 0.1);
+    background: #f0f0f0;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
-    color: #fff;
+    color: #333;
 }
 
 /* Media Queries */
@@ -341,7 +349,8 @@ h2 {
 footer {
     text-align: center;
     padding: 1rem;
-    background: #f9f9f9;
+    background: #f5f5f5;
+    color: #333;
 }
 
 /* Project Slider Styles */
