@@ -1,0 +1,41 @@
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Add these classes */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 1s ease forwards;
+}
+
+.hide {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeOut 1s ease forwards;
+} 

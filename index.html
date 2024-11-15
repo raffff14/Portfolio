@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home" style="--i:4;">Home</a></li>
+            <li><a href="#about" style="--i:3;">About</a></li>
+            <li><a href="#projects" style="--i:2;">Projects</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 style="animation: slideRight .5s ease forwards;">Hi, I'm <span class="highlight">Rafhael Malabanan</span></h1>
+                <p>Web Developer | Designer | Creative Thinker</p>
+                <br>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <a href="mailto:rafhaelmalabanan1@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://github.com/your-github-profile" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                      <div class="contact-item"></div>
+                        <a href="https://tinyurl.com/RafhaelMalabananResume" target="_blank" class="cta-button" style="background-color: white;color: #fca59e; font-weight: bold; ">View My CV</a>
+                    </div>
+            </div>
+            <div class="hero-image">
+                <img src="./images/rafhael.jpg" alt="Your Photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about hidden">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="your-photo.jpg" alt="Your Photo" class="profile-img">
+            <div class="about-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quaerat, quibusdam cumque facilis quisquam dolore voluptatem architecto expedita quo? Asperiores nihil nulla cumque magnam perferendis maiores iure ex reiciendis dicta?</p>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <!-- Add more skills -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects hidden">
+                <h2>My projects</h2>
+
+        <div class="project-slider-container">
+            <div class="project-slider">
+                <!-- Project 1 -->
+                <div class="project-slide">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <div class="project-number">01</div>
+                            <h2>Angelite Forecast</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="images/image.png" alt="Project 1">
+                        </div>
+                    </div>
+                </div>
+
+                                <!-- Project 2 -->
+                <div class="project-slide">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <div class="project-number">02</div>
+                            <h2>Opsysfun</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="images/opsysfunn.png" alt="Project 1">
+                        </div>
+                    </div>
+                </div>
+
+
+                                    <!-- Project 2 -->
+                <div class="project-slide">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <div class="project-number">02</div>
+                            <h2>Angelite Forecast</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="images/opsysfunn.png" alt="Project 1">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+                <!-- Copy the same structure for projects 2-5, changing content and numbers -->
+            </div>
+            
+            <button class="slider-arrow prev-arrow">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-arrow next-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    entry.target.classList.remove('hide');
+                } else {
+                    entry.target.classList.remove('show');
+                    entry.target.classList.add('hide');
+                }
+            });
+        }, {
+            // Adding threshold to make the animation smoother
+            threshold: 0.2
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.project-slider');
+            const slides = document.querySelectorAll('.project-slide');
+            const prevButton = document.querySelector('.prev-arrow');
+            const nextButton = document.querySelector('.next-arrow');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            // Hide prev button initially
+            prevButton.style.display = 'none';
+
+            function updateSliderPosition() {
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Show/hide arrows based on position
+                prevButton.style.display = currentSlide === 0 ? 'none' : 'block';
+                nextButton.style.display = currentSlide === totalSlides - 1 ? 'none' : 'block';
+            }
+
+            function nextSlide() {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateSliderPosition();
+                }
+            }
+
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSliderPosition();
+                }
+            }
+
+            // Add click event listeners
+            nextButton.addEventListener('click', nextSlide);
+            prevButton.addEventListener('click', prevSlide);
+
+            // Optional: Add keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight') nextSlide();
+                if (e.key === 'ArrowLeft') prevSlide();
+            });
+        });
+    </script>
+</body>
+</html> 
+
