@@ -9,6 +9,11 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
+    zoom: 150%; /* For most browsers */
+    -moz-transform: scale(1.5); /* For Firefox */
+    -moz-transform-origin: 0 0;
+    transform: scale(1.5); /* Alternative method */
+    transform-origin: 0 0;
 }
 
 /* Navigation */
@@ -22,6 +27,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    transform: scale(0.67); /* 1/1.5 to counter the body zoom */
+    transform-origin: top left;
+    width: 150%; /* Compensate for the scale */
 }
 
 .logo {
@@ -90,18 +98,22 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 80%; /* Adjust from 1200px to percentage */
+    margin: 0 auto;
     padding: 0 2rem;
+    gap: 2rem;
 }
 
 .hero-text {
     text-align: left;
     color: white;
+    flex: 1;
 }
 
 .hero-image {
     width: 400px;
     height: 400px;
+    margin-left: 1000px;
 }
 
 .hero-image img {
@@ -111,6 +123,7 @@ nav {
     border-radius: 50%;
     animation: pixelBuild 1.5s ease-out;
     image-rendering: pixelated;
+    margin-right: 0;
 }
 
 @keyframes pixelBuild {
@@ -171,7 +184,7 @@ h2 {
 .about-content {
     display: flex;
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 80%; /* Adjust from 1200px to percentage */
     margin: 0 auto;
 }
 
