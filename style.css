@@ -6,8 +6,11 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -57,17 +60,32 @@ nav {
 
 .nav-links li {
     opacity: 0;
+    -webkit-animation: slideBottom 0.5s ease forwards;
+    -moz-animation: slideBottom 0.5s ease forwards;
     animation: slideBottom 0.5s ease forwards;
+    -webkit-animation-delay: calc(0.2s * var(--i));
+    -moz-animation-delay: calc(0.2s * var(--i));
     animation-delay: calc(0.2s * var(--i));
 }
 
-@keyframes slideBottom {
+@-webkit-keyframes slideBottom {
     0% {
-        transform: translateY(100px);
+        -webkit-transform: translateY(100px);
         opacity: 0;
     }
     100% {
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes slideBottom {
+    0% {
+        -moz-transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        -moz-transform: translateY(0);
         opacity: 1;
     }
 }
@@ -272,7 +290,14 @@ h2 {
 }
 
 .project-card:hover {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
     transform: translateY(-5px);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .project-number {
@@ -394,8 +419,15 @@ footer {
 }
 
 .project-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
     transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
     width: 100%;
 }
 
@@ -568,6 +600,9 @@ nav {
 
 /* Add smooth transitions for all color changes */
 * {
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+    -moz-transition: background-color 0.3s ease, color 0.3s ease;
+    -o-transition: background-color 0.3s ease, color 0.3s ease;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -823,5 +858,11 @@ nav {
 
 html {
     scroll-behavior: smooth;
+}
+
+@supports not (scroll-behavior: smooth) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
