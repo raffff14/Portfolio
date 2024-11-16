@@ -12,36 +12,40 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo">Portfolio</div>
-        <ul class="nav-links">
-            <li><a href="#home" style="--i:4;">Home</a></li>
-            <li><a href="#about" style="--i:3;">About</a></li>
-            <li><a href="#projects" style="--i:2;">Projects</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home" style="font-size: 2rem; font-weight: bold; color: rgb(0, 0, 0);">RM</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" style="--i:4;">Home</a></li>
+                <li><a href="#about" style="--i:3;">About</a></li>
+                <li><a href="#projects" style="--i:2;">Projects</a></li>
+                <li><a href="#contact" style="--i:1;">Contact</a></li>
+            </ul>
+            
+            <div class="nav-social">
+                <a href="mailto:rafhaelmalabanan2002@gmail.com" class="social-link" style="font-size: 1.8rem; "><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/rafhael-malabanan-780305307/" target="_blank" class="social-link" style="font-size: 1.8rem;"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/raffff14" target="_blank" class="social-link" style="font-size: 1.8rem;"><i class="fab fa-github"></i></a>
+                <button class="theme-toggle social-link" id="theme-toggle" style="font-size: 1.8rem;" >
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 style="animation: slideRight .5s ease forwards;">Hi, I'm <span class="highlight">Rafhael Malabanan</span></h1>
-                <p>Web Developer | Designer | Creative Thinker</p>
-                <br>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <a href="mailto:rafhaelmalabanan1@gmail.com"><i class="fas fa-envelope"></i></a>
-                    </div>
-                    <div class="contact-item">
-                        <a href="https://www.linkedin.com/in/rafhael-malabanan-780305307/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                    <div class="contact-item">
-                        <a href="https://github.com/raffff14" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
+                <span class="greeting">Hello, I'm</span>
+                <h1><span class="highlight">Rafhael Malabanan</span></h1>
+                <p class="typed-text"> Full stock Developer</p>
+                <p class="hero-description">I craft elegant solutions through code and design, turning ideas into seamless digital experiences.</p>
+                <div class="cta-buttons">
+                    <a href="./RafhaelMalabanan.pdf" target="_blank" class="cta-button primary">View Resume</a>
+                    <a href="#projects" class="cta-button secondary">See My Work</a>
                 </div>
-                      <div class="contact-item"></div>
-                        <a href="https://tinyurl.com/RafhaelMalabananResume" target="_blank" class="cta-button" style="background-color: white;color: #000000; font-weight: bold; ">View My CV</a>
-                    </div>
             </div>
             <div class="hero-image">
                 <img src="./images/rafhael.jpg" alt="Your Photo">
@@ -60,21 +64,27 @@
                     <h3>Skills</h3>
                     <br>
                     <ul>
-                        <li style="font-size: larger; list-style: none;"><i class="fab fa-html5"></i></li>
-                        <li style="font-size: larger; list-style: none;"><i class="fab fa-js"></i></li>
-                        <li style="font-size: larger; list-style: none;"><i class="fab fa-react"></i></li>
-                        <li style="font-size: larger; list-style: none;"><i class="fab fa-node"></i></li>
+                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-html5"></i></li>
+                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-js"></i></li>
+                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-react"></i></li>
+                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-node"></i></li>
+                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-python"></i></li>
+                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fas fa-database"></i></li>
+                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fas fa-cloud"></i></li>
                         <!-- Add more skills -->
                     </ul>
                 </div>
                 <br>
                 <div class="personal-info">
                     <h3>Personal Info</h3>
-                    <ul>
-                        <li><i class="fas fa-birthday-cake"></i> Age: 21</li>
-                        <li><i class="fas fa-flag"></i> Nationality: Filipino</li>
+                    <div>
+                        <p><i class="fas fa-birthday-cake"></i> Age: 21</p>
+                        <p><i class="fas fa-flag"></i> Nationality: Filipino</p>
+                        <p><i class="fas fa-phone"></i> Phone: 09917113982</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Location: Angeles, Philippines</p>
+                        <p><i class="fas fa-calendar"></i> Date of Birth: 12/14/2002</p>
                         <!-- Add more personal info -->
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,8 +92,7 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects hidden">
-                <h2>My projects</h2>
-
+        <h2>My Projects</h2>
         <div class="project-slider-container">
             <div class="project-slider">
                 <!-- Project 1 -->
@@ -99,17 +108,23 @@
                                 <span>JavaScript</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt" style="font-size: 2rem;"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
                             </div>
                         </div>
-                        <div class="project-image">
-                            <img src="images/image.png" alt="Project 1">
+                        <div class="project-image-deck">
+                            <img src="images/image.png" alt="Project 1" class="deck-image">
+                            <img src="images/image.png" alt="Project 1" class="deck-image">
+                            <img src="images/image.png" alt="Project 1" class="deck-image">
+                            <div class="deck-nav">
+                                <button class="deck-nav-btn prev-image"><i class="fas fa-chevron-left" style="font-size: 2rem;"></i></button>
+                                <button class="deck-nav-btn next-image"><i class="fas fa-chevron-right" style="font-size: 2rem;"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                                <!-- Project 2 -->
+                <!-- Project 2 -->
                 <div class="project-slide">
                     <div class="project-content">
                         <div class="project-text">
@@ -122,22 +137,27 @@
                                 <span>JavaScript</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt" style="font-size: 2rem;"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
                             </div>
                         </div>
-                        <div class="project-image">
-                            <img src="images/opsysfunn.png" alt="Project 1">
+                        <div class="project-image-deck">
+                            <img src="images/opsysfunn.png" alt="Project 2" class="deck-image">
+                            <img src="images/opsysfunn2.png" alt="Project 2" class="deck-image">
+                            <img src="images/opsysfunn3.png" alt="Project 2" class="deck-image">
+                            <div class="deck-nav">
+                                <button class="deck-nav-btn prev-image"><i class="fas fa-chevron-left" style="font-size: 2rem;"></i></button>
+                                <button class="deck-nav-btn next-image"><i class="fas fa-chevron-right" style="font-size: 2rem;"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-
-                                    <!-- Project 2 -->
+                <!-- Project 3 -->
                 <div class="project-slide">
                     <div class="project-content">
                         <div class="project-text">
-                            <div class="project-number">02</div>
+                            <div class="project-number">03</div>
                             <h2>Think Fast</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
                             <div class="project-tech">
@@ -146,21 +166,27 @@
                                 <span>JavaScript</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/VurnKambal/Invocation" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt" style="font-size: 2rem;"></i></a>
+                                <a href="https://github.com/VurnKambal/Invocation" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
                             </div>
                         </div>
-                        <div class="project-image">
-                            <img src="images/thinkfast.png" alt="Project 1">
+                        <div class="project-image-deck">
+                            <img src="images/thinkfast.png" alt="Project 3" class="deck-image">
+                            <img src="images/thinkfast2.png" alt="Project 3" class="deck-image">
+                            <img src="images/thinkfast3.png" alt="Project 3" class="deck-image">
+                            <div class="deck-nav">
+                                <button class="deck-nav-btn prev-image"><i class="fas fa-chevron-left" style="font-size: 2rem;"></i></button>
+                                <button class="deck-nav-btn next-image"><i class="fas fa-chevron-right" style="font-size: 2rem;"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-
-             <div class="project-slide">
+                <!-- Project 4 -->
+                <div class="project-slide">
                     <div class="project-content">
                         <div class="project-text">
-                            <div class="project-number">02</div>
+                            <div class="project-number">04</div>
                             <h2>Invocation</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
                             <div class="project-tech">
@@ -169,32 +195,67 @@
                                 <span>JavaScript</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/VurnKambal/Invocation" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt" style="font-size: 2rem;"></i></a>
+                                <a href="https://github.com/VurnKambal/Invocation" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
                             </div>
                         </div>
-                        <div class="project-image">
-                            <img src="images/nftgacha.png" alt="Project 1">
+                        <div class="project-image-deck">
+                            <video src="videos/nft.mp4" class="deck-image" autoplay loop muted style="width: 100%; height: auto;"></video>
+                            <img src="images/image.png" alt="Project 4" class="deck-image" style="width: 100%;">
+                            <div class="deck-nav">
+                                <button class="deck-nav-btn prev-image"><i class="fas fa-chevron-left" style="font-size: 2rem;"></i></button>
+                                <button class="deck-nav-btn next-image"><i class="fas fa-chevron-right" style="font-size: 2rem;"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-     
 
-
-
-                
-                <!-- Copy the same structure for projects 2-5, changing content and numbers -->
+                <div class="project-slide">
+                    <div class="project-content">
+                        <div class="project-text">
+                            <div class="project-number">04</div>
+                            <h2>Numericals</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fas fa-external-link-alt" style="font-size: 2rem;"></i></a>
+                                <a href="https://github.com/Jaafary24/NumericalMethods-UBERStocksPrediction" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-image-deck">
+                            <video src="videos/nft.mp4" class="deck-image" autoplay loop muted style="width: 100%; height: auto;"></video>
+                            <img src="images/image.png" alt="Project 4" class="deck-image" style="width: 100%;">
+                            <div class="deck-nav">
+                                <button class="deck-nav-btn prev-image"><i class="fas fa-chevron-left" style="font-size: 2rem;"></i></button>
+                                <button class="deck-nav-btn next-image"><i class="fas fa-chevron-right" style="font-size: 2rem;"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
+
+
+    
             
-            <button class="slider-arrow prev-arrow">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="slider-arrow next-arrow">
-                <i class="fas fa-chevron-right"></i>
-            </button>
+            <!-- Main slider controls -->
+            <div class="slider-controls">
+                <button class="slider-arrow prev-arrow">
+                    <i class="fas fa-chevron-left" style="font-size: 2rem;"></i>
+                </button>
+                <button class="slider-arrow next-arrow">
+                    <i class="fas fa-chevron-right" style="font-size: 2rem;"></i>
+                </button>
+            </div>
         </div>
     </section>
+
     <!-- Contact Section -->
     
     <!-- Footer -->
@@ -206,15 +267,15 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
+                    entry.target.classList.remove('show', 'hidden', 'hide');
+                    void entry.target.offsetWidth;
                     entry.target.classList.add('show');
-                    entry.target.classList.remove('hide');
                 } else {
                     entry.target.classList.remove('show');
                     entry.target.classList.add('hide');
                 }
             });
         }, {
-            // Adding threshold to make the animation smoother
             threshold: 0.2
         });
 
@@ -263,6 +324,78 @@
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'ArrowRight') nextSlide();
                 if (e.key === 'ArrowLeft') prevSlide();
+            });
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const decks = document.querySelectorAll('.project-image-deck');
+            
+            decks.forEach(deck => {
+                const images = deck.querySelectorAll('.deck-image');
+                const prevBtn = deck.querySelector('.prev-image');
+                const nextBtn = deck.querySelector('.next-image');
+                let currentIndex = 0;
+
+                // Function to update active image
+                function updateActiveImage() {
+                    images.forEach((img, index) => {
+                        if (index === currentIndex) {
+                            img.style.transform = 'translateY(0) rotate(0deg)';
+                            img.style.zIndex = '4';
+                            img.classList.add('active');
+                        } else if (index < currentIndex) {
+                            img.style.transform = 'translateY(-30px) rotate(-3deg)';
+                            img.style.zIndex = '2';
+                            img.classList.remove('active');
+                        } else {
+                            img.style.transform = 'translateY(30px) rotate(3deg)';
+                            img.style.zIndex = '1';
+                            img.classList.remove('active');
+                        }
+                    });
+                }
+
+                // Next image
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    updateActiveImage();
+                });
+
+                // Previous image
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    updateActiveImage();
+                });
+
+                // Click on image to view
+                images.forEach((img, index) => {
+                    img.addEventListener('click', () => {
+                        currentIndex = index;
+                        updateActiveImage();
+                    });
+                });
             });
         });
     </script>

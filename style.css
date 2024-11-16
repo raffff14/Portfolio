@@ -1,28 +1,17 @@
 /* First, add the font import at the very top of your CSS file */
-@import url('https://use.typekit.net/[your-kit-code].css'); /* You'll need a valid Adobe Fonts kit code */
-
-/* Alternative: If you have the font files locally */
-@font-face {
-    font-family: 'Futura PT';
-    src: url('path/to/FuturaPT-Book.woff2') format('woff2'),
-         url('path/to/FuturaPT-Book.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Using a similar free font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 /* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 23px;
+
 }
 
 body {
-    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f5f5f5;
@@ -49,8 +38,7 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
-    animation: slideTop .5 ease forwards;
-    animation-delay : calc(.2 *var(--i));
+    margin-left: 2rem;
 }
 
 .nav-links li a {
@@ -58,6 +46,8 @@ nav {
     text-decoration: none;
     color: #ffffff;
     transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.2px;
 }
 
 .nav-links li a:hover {
@@ -123,7 +113,7 @@ nav {
 .hero-image {
     width: 400px;
     height: 400px;
-    margin-left: -400px;
+    margin-left: 200px;
 }
 
 .hero-image img {
@@ -156,6 +146,9 @@ nav {
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .highlight {
@@ -165,18 +158,49 @@ nav {
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
-    background: #007bff;
-    color: white;
+    background: var(--button-bg);
+    color: var(--button-text);
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
+    border-radius: 30px;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: 2px solid transparent;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .cta-button:hover {
-    background: #0056b3;
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
-    transform: translateY(-2px);
+    background: var(--button-hover-bg);
+    color: var(--button-hover-text);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(252, 165, 158, 0.4);
+    border-color: var(--button-hover-bg);
+}
+
+.cta-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(252, 165, 158, 0.4);
+}
+
+/* Optional: Add a subtle animation on hover */
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    transition: 0.6s;
+    z-index: -1;
+}
+
+.cta-button:hover::after {
+    transform: translateX(100%);
 }
 
 /* Sections */
@@ -188,6 +212,8 @@ section {
 h2 {
     text-align: center;
     margin-bottom: 3rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
 }
 
 /* About Section */
@@ -254,6 +280,8 @@ h2 {
     font-weight: bold;
     color: rgba(255, 255, 255, 0.1);
     margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
 }
 
 .project-card img {
@@ -295,6 +323,8 @@ h2 {
     border-radius: 20px;
     font-size: 0.9rem;
     color: #333;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
 }
 
 /* Media Queries */
@@ -399,30 +429,399 @@ footer {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#projects .slider-arrow {
+    position: static;
+    transform: none;
+    background: var(--button-bg);
+    color: var(--button-text);
     border: none;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 10;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.slider-arrow:hover {
-    background: rgba(0, 0, 0, 0.8);
+#projects .slider-arrow:hover {
+    background: var(--button-hover-bg);
+    color: var(--button-hover-text);
+    transform: translateY(-2px);
 }
 
-.prev-arrow {
-    left: 1rem;
+#projects .slider-arrow:active {
+    transform: translateY(-1px);
 }
 
-.next-arrow {
-    right: 1rem;
+/* Right side social links */
+.nav-social {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-social a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.nav-social a:hover {
+    color: #fca59e;
+    text-shadow: 0 0 10px #fca59e;
+}
+
+/* Update the nav-container styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Add these CSS variables for theming */
+:root {
+    /* Light theme (default) */
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --nav-bg: #000000;
+    --card-bg: white;
+    --card-text: #333;
+    --hover-color: #fca59e;
+    --section-bg: #f5f5f5;
+    --footer-bg: #f5f5f5;
+    --skill-bg: #f0f0f0;
+    --skill-text: #333;
+    --project-number-color: rgba(0, 0, 0, 0.1);
+    --slider-arrow-bg: rgba(0, 0, 0, 0.5);
+    --slider-arrow-hover: rgba(0, 0, 0, 0.8);
+    --button-bg: #000000;
+    --button-text: #ffffff;
+    --button-hover-bg: #fca59e;
+    --button-hover-text: #000000;
+    --text-secondary: #666666;
+}
+
+[data-theme="dark"] {
+    /* Dark theme */
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --nav-bg: #ffffff;
+    --nav-text: #000000;
+    --card-bg: #2d2d2d;
+    --card-text: #ffffff;
+    --hover-color: #fca59e;
+    --section-bg: #1a1a1a;
+    --footer-bg: #2d2d2d;
+    --skill-bg: #2d2d2d;
+    --skill-text: #ffffff;
+    --project-number-color: rgba(255, 255, 255, 0.1);
+    --slider-arrow-bg: rgba(255, 255, 255, 0.2);
+    --slider-arrow-hover: rgba(255, 255, 255, 0.4);
+    --button-bg: #ffffff;
+    --button-text: #000000;
+    --button-hover-bg: #fca59e;
+    --button-hover-text: #ffffff;
+    --text-secondary: #a0a0a0;
+}
+
+/* Update these existing styles to use the variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+nav {
+    background: var(--nav-bg);
+}
+
+.project-card {
+    background: var(--card-bg);
+    color: var(--card-text);
+}
+
+/* Add theme toggle button styles */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--button-text);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin-left: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--hover-color);
+    text-shadow: 0 0 10px var(--hover-color);
+}
+
+/* Add smooth transitions for all color changes */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Update these styles to use CSS variables */
+section {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.hero {
+    background: var(--background-color);
+}
+
+.hero-text {
+    color: var(--text-color);
+}
+
+.hero-text h1 {
+    color: var(--text-color);
+}
+
+.hero-text p {
+    color: var(--text-color);
+}
+
+.about-text {
+    color: var(--text-color);
+}
+
+.about-text p {
+    color: var(--text-color);
+}
+
+.project-text h2 {
+    color: var(--text-color);
+}
+
+.project-text p {
+    color: var(--text-color);
+}
+
+.project-number {
+    color: var(--project-number-color);
+}
+
+.skills h3, 
+.personal-info h3 {
+    color: var(--text-color);
+}
+
+.skills li,
+.personal-info li {
+    color: var(--text-color);
+    background: var(--skill-bg);
+}
+
+.project-tech span {
+    background: var(--skill-bg);
+    color: var(--text-color);
+}
+
+h2 {
+    color: var(--text-color);
+}
+
+footer {
+    background: var(--footer-bg);
+    color: var(--text-color);
+}
+
+/* Update dark theme colors for better contrast */
+[data-theme="dark"] {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --nav-bg: #ffffff;
+    --nav-text: #000000;
+    --card-bg: #2d2d2d;
+    --card-text: #ffffff;
+    --hover-color: #fca59e;
+    --section-bg: #1a1a1a;
+    --footer-bg: #2d2d2d;
+    --skill-bg: #2d2d2d;
+    --skill-text: #ffffff;
+    --project-number-color: rgba(255, 255, 255, 0.1);
+    --slider-arrow-bg: rgba(255, 255, 255, 0.2);
+    --slider-arrow-hover: rgba(255, 255, 255, 0.4);
+    --button-bg: #ffffff;
+    --button-text: #000000;
+    --button-hover-bg: #fca59e;
+    --button-hover-text: #ffffff;
+}
+
+/* Update nav styles to use the new variables */
+nav {
+    background: var(--nav-bg);
+}
+
+/* Update nav text colors for dark mode */
+[data-theme="dark"] .nav-links li a,
+[data-theme="dark"] .nav-social a,
+[data-theme="dark"] .theme-toggle {
+    color: #000000;
+}
+
+[data-theme="dark"] .nav-links li a:hover,
+[data-theme="dark"] .nav-social a:hover,
+[data-theme="dark"] .theme-toggle:hover {
+    color: var(--hover-color);
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.hide {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100px);
+}
+
+.project-image-deck {
+    flex: 1;
+    max-width: 600px;
+    position: relative;
+    height: 400px; /* Adjust as needed */
+}
+
+.deck-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+/* Position each image in the deck */
+.deck-image:nth-child(1) {
+    transform: translateY(0) rotate(0deg);
+    z-index: 3;
+}
+
+.deck-image:nth-child(2) {
+    transform: translateY(20px) rotate(3deg);
+    z-index: 2;
+}
+
+.deck-image:nth-child(3) {
+    transform: translateY(40px) rotate(-3deg);
+    z-index: 1;
+}
+
+/* Hover effects */
+.project-image-deck:hover .deck-image:nth-child(1) {
+    transform: translateY(-30px) rotate(-3deg);
+}
+
+.project-image-deck:hover .deck-image:nth-child(2) {
+    transform: translateY(0) rotate(0deg);
+}
+
+.project-image-deck:hover .deck-image:nth-child(3) {
+    transform: translateY(30px) rotate(3deg);
+}
+
+/* Optional: Add click functionality with JavaScript */
+.deck-image.active {
+    transform: translateY(0) rotate(0deg) !important;
+    z-index: 4;
+}
+
+/* Logo styles */
+.logo a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo a:hover {
+    color: var(--hover-color);
+}
+
+/* Enhanced hero section */
+.greeting {
+    font-size: 1.2rem;
+    color: var(--hover-color);
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 500;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    max-width: 600px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cta-button.primary {
+    background: var(--button-bg);
+    color: var(--button-text);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid var(--button-bg);
+    color: var(--text-color);
+}
+
+.cta-button.secondary:hover {
+    background: var(--button-bg);
+    color: var(--button-text);
+}
+
+/* Enhanced transitions */
+.nav-links li a,
+.cta-button,
+.project-card,
+.social-link {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Improved hover effects */
+.nav-links li a:hover,
+.social-link:hover {
+    transform: translateY(-2px);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
