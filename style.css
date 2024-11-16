@@ -36,12 +36,16 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    color: var(--logo-color);
+    transition: color 0.3s ease;
+    margin-left: -2rem;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    margin-left: 2rem;
+    margin-left: -8rem;
+    gap: 2rem;
 }
 
 .nav-links li a {
@@ -496,6 +500,7 @@ footer {
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    margin-left: auto;
 }
 
 .nav-social a {
@@ -517,6 +522,7 @@ footer {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
 /* Add these CSS variables for theming */
@@ -540,6 +546,7 @@ footer {
     --button-hover-bg: #fca59e;
     --button-hover-text: #000000;
     --text-secondary: #666666;
+    --logo-color: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -563,6 +570,7 @@ footer {
     --button-hover-bg: #fca59e;
     --button-hover-text: #ffffff;
     --text-secondary: #a0a0a0;
+    --logo-color: #000000;
 }
 
 /* Update these existing styles to use the variables */
@@ -736,17 +744,25 @@ nav {
     flex: 1;
     max-width: 600px;
     position: relative;
-    height: 400px; /* Adjust as needed */
+    height: 400px;
+    perspective: 1000px;
+    padding: 20px;
+    margin: 40px auto;
 }
 
 .deck-image {
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     position: absolute;
-    transition: all 0.3s ease;
+    left: 20px;
+    top: 20px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    opacity: 1;
+    border: 3px solid var(--card-bg);
 }
 
 /* Position each image in the deck */
@@ -765,9 +781,9 @@ nav {
     z-index: 1;
 }
 
-/* Hover effects */
+/* Adjust hover transforms to stay within bounds */
 .project-image-deck:hover .deck-image:nth-child(1) {
-    transform: translateY(-30px) rotate(-3deg);
+    transform: translateY(-20px) rotate(-3deg);
 }
 
 .project-image-deck:hover .deck-image:nth-child(2) {
@@ -775,13 +791,22 @@ nav {
 }
 
 .project-image-deck:hover .deck-image:nth-child(3) {
-    transform: translateY(30px) rotate(3deg);
+    transform: translateY(20px) rotate(3deg);
 }
 
-/* Optional: Add click functionality with JavaScript */
-.deck-image.active {
-    transform: translateY(0) rotate(0deg) !important;
-    z-index: 4;
+/* Update container for better mobile responsiveness */
+@media (max-width: 768px) {
+    .project-image-deck {
+        height: 300px;
+        padding: 15px;
+    }
+    
+    .deck-image {
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        left: 15px;
+        top: 15px;
+    }
 }
 
 /* Logo styles */
@@ -789,7 +814,7 @@ nav {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--logo-color);
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -863,6 +888,118 @@ html {
 @supports not (scroll-behavior: smooth) {
     html {
         scroll-behavior: auto;
+    }
+}
+
+/* Update nav text colors for both light and dark modes */
+.nav-links li a,
+.nav-social a,
+.theme-toggle,
+.logo a {
+    color: #ffffff;  /* White text in light mode */
+}
+
+[data-theme="dark"] .nav-links li a,
+[data-theme="dark"] .nav-social a,
+[data-theme="dark"] .theme-toggle,
+[data-theme="dark"] .logo a {
+    color: #000000;  /* Black text in dark mode */
+}
+
+/* Update hover states */
+.nav-links li a:hover,
+.nav-social a:hover,
+.theme-toggle:hover,
+.logo a:hover {
+    color: var(--hover-color);
+    text-shadow: 0 0 10px var(--hover-color);
+}
+
+/* Remove or update these conflicting styles */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Remove the color property here since it's handled above */
+}
+
+.logo a {
+    /* Remove any color property here as well */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* About grid layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;  /* Increased gap between grid items */
+    margin-top: 3rem;  /* Increased top margin */
+    padding: 2rem;  /* Added padding around the grid */
+}
+
+/* Individual section styles */
+.skills,
+.organizations,
+.certificates,
+.education {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Section headers */
+.about-grid h3 {
+    color: var(--text-color);
+    margin-bottom: 2rem;  /* Increased bottom margin for headers */
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;  /* Increased font size */
+}
+
+/* List items spacing */
+.about-grid ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-grid li {
+    margin-bottom: 1.5rem;  /* Space between list items */
+}
+
+.about-grid li:last-child {
+    margin-bottom: 0;  /* Remove margin from last item */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;  /* Single column on mobile */
+        gap: 2rem;  /* Slightly reduced gap on mobile */
+        padding: 1rem;  /* Reduced padding on mobile */
+    }
+}
+
+/* Add or update these styles for video in deck */
+.project-image-deck video.deck-image {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    object-fit: contain;
+    background: var(--card-bg);
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+/* Update media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .project-image-deck video.deck-image {
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        left: 15px;
+        top: 15px;
     }
 }
 

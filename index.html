@@ -14,13 +14,13 @@
     <nav>
         <div class="nav-container">
             <div class="logo">
-                <a href="#home" style="font-size: 2rem; font-weight: bold; color: rgb(0, 0, 0);">RM</a>
+                <a href="#home" style="font-size: 2rem; font-weight: bold; color: var(--logo-color);"></a>
             </div>
             <ul class="nav-links">
                 <li><a href="#home" style="--i:4;">Home</a></li>
                 <li><a href="#about" style="--i:3;">About</a></li>
                 <li><a href="#projects" style="--i:2;">Projects</a></li>
-                <li><a href="#contact" style="--i:1;">Contact</a></li>
+                <!-- <li><a href="#contact" style="--i:1;">Contact</a></li> -->
             </ul>
             
             <div class="nav-social">
@@ -57,33 +57,70 @@
     <section id="about" class="about hidden">
         <h2>About Me</h2>
         <div class="about-content">
-            <img src="your-photo.jpg" alt="Your Photo" class="profile-img">
             <div class="about-text">
                 <p>I'm a fourth-year computer science student eager to deepen my knowledge in my field. I have experience with several languages like Python, Java, and JavaScript, SQL, and have a background in cloud computing.</p>
-                <div class="skills"><br>
-                    <h3>Skills</h3>
-                    <br>
-                    <ul>
-                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-html5"></i></li>
-                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-js"></i></li>
-                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-react"></i></li>
-                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-node"></i></li>
-                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-python"></i></li>
-                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fas fa-database"></i></li>
-                        <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fas fa-cloud"></i></li>
-                        <!-- Add more skills -->
-                    </ul>
-                </div>
-                <br>
-                <div class="personal-info">
-                    <h3>Personal Info</h3>
-                    <div>
-                        <p><i class="fas fa-birthday-cake"></i> Age: 21</p>
-                        <p><i class="fas fa-flag"></i> Nationality: Filipino</p>
-                        <p><i class="fas fa-phone"></i> Phone: 09917113982</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Location: Angeles, Philippines</p>
-                        <p><i class="fas fa-calendar"></i> Date of Birth: 12/14/2002</p>
-                        <!-- Add more personal info -->
+                
+                <div class="about-grid">
+                    <!-- Skills Section -->
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-html5"></i></li>
+                            <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-js"></i></li>
+                            <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-react"></i></li>
+                            <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-node"></i></li>
+                            <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-python"></i></li>
+                            <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fas fa-database"></i></li>
+                            <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fas fa-cloud"></i></li>
+                            <!-- Add more skills -->
+                        </ul>
+                    </div>
+
+                    <!-- Organizations Section -->
+                    <div class="organizations">
+                        <h3>Organizations</h3>
+                        <ul>
+                            <li>
+                                <h4>League of Outstanding Programmer</h4>
+                                <p>Member 2021 – 2024</p>
+                                <p>Angeles, Philippines</p>
+                            </li>
+                            <li>
+                                <h4>Google Developer Student Clubs</h4>
+                                <p>Member 2021 – 2024</p>
+                                <p>Angeles, Philippines</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Certificates Section -->
+                    <div class="certificates">
+                        <h3>Certificates</h3>
+                        <ul>
+                            <li>AWS Academy Cloud Foundations</li>
+                            <li>Introduction to Cybersecurity</li>
+                            <li>Cyber Ops Associate</li>
+                            <li>Introduction to IoT</li>
+                        </ul>
+                    </div>
+
+                    <!-- Education Section -->
+                    <div class="education">
+                        <h3>Education</h3>
+                        <ul>
+                            <li>
+                                <h4>Bachelor of Science in Computer Science</h4>
+                                <p>Holy Angel University</p>
+                                <p>Dean's Lister</p>
+                                <p>2021 – present</p>
+                                <p>Angeles, Philippines</p>
+                            </li>
+                            <li>
+                                <h4>Holy Family Academy</h4>
+                                <p>2015 – 2021</p>
+                                <p>Angeles, Philippines</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -101,25 +138,22 @@
                         <div class="project-text">
                             <div class="project-number">01</div>
                             <h2>Angelite Forecast</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
                             <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
+                                <span>API</span>
+                                <span>PostgreSQL</span>
+                                <span>Google Cloud</span>
+                                <span>Tailwind</span>
+                                <span>React</span>
                             </div>
                             <div class="project-links">
                                 <a href="#" target="_blank"><i class="fas fa-external-link-alt" style="font-size: 2rem;"></i></a>
-                                <a href="#" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
+                                <a href="https://github.com/VurnKambal/AngeliteForecast/tree/master" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
                             </div>
                         </div>
                         <div class="project-image-deck">
                             <img src="images/image.png" alt="Project 1" class="deck-image">
-                            <img src="images/image.png" alt="Project 1" class="deck-image">
-                            <img src="images/image.png" alt="Project 1" class="deck-image">
-                            <div class="deck-nav">
-                                <button class="deck-nav-btn prev-image"><i class="fas fa-chevron-left" style="font-size: 2rem;"></i></button>
-                                <button class="deck-nav-btn next-image"><i class="fas fa-chevron-right" style="font-size: 2rem;"></i></button>
-                            </div>
+                            <img src="images/angeliteforecast2.png" alt="Project 1" class="deck-image">
+                            <img src="images/angeliteforecast3.png" alt="Project 1" class="deck-image">
                         </div>
                     </div>
                 </div>
@@ -129,26 +163,21 @@
                     <div class="project-content">
                         <div class="project-text">
                             <div class="project-number">02</div>
-                            <h2>Opsysfun</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                            <h2>Invocation</h2>
                             <div class="project-tech">
                                 <span>HTML</span>
                                 <span>CSS</span>
                                 <span>JavaScript</span>
+                                <span>TypeScript</span>
+                                <span>Blockchain</span>
                             </div>
                             <div class="project-links">
                                 <a href="#" target="_blank"><i class="fas fa-external-link-alt" style="font-size: 2rem;"></i></a>
-                                <a href="#" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
+                                <a href="https://github.com/VurnKambal/Invocation" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
                             </div>
                         </div>
                         <div class="project-image-deck">
-                            <img src="images/opsysfunn.png" alt="Project 2" class="deck-image">
-                            <img src="images/opsysfunn2.png" alt="Project 2" class="deck-image">
-                            <img src="images/opsysfunn3.png" alt="Project 2" class="deck-image">
-                            <div class="deck-nav">
-                                <button class="deck-nav-btn prev-image"><i class="fas fa-chevron-left" style="font-size: 2rem;"></i></button>
-                                <button class="deck-nav-btn next-image"><i class="fas fa-chevron-right" style="font-size: 2rem;"></i></button>
-                            </div>
+                            <video src="videos/nft.mp4" class="deck-image" autoplay loop muted style="width: 100%; height: auto;"></video>
                         </div>
                     </div>
                 </div>
@@ -158,8 +187,7 @@
                     <div class="project-content">
                         <div class="project-text">
                             <div class="project-number">03</div>
-                            <h2>Think Fast</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                            <h2>Page Replacement </h2>
                             <div class="project-tech">
                                 <span>HTML</span>
                                 <span>CSS</span>
@@ -167,17 +195,11 @@
                             </div>
                             <div class="project-links">
                                 <a href="#" target="_blank"><i class="fas fa-external-link-alt" style="font-size: 2rem;"></i></a>
-                                <a href="https://github.com/VurnKambal/Invocation" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
+                                <a href="https://github.com/raffff14/Opsysfun" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
                             </div>
                         </div>
                         <div class="project-image-deck">
-                            <img src="images/thinkfast.png" alt="Project 3" class="deck-image">
-                            <img src="images/thinkfast2.png" alt="Project 3" class="deck-image">
-                            <img src="images/thinkfast3.png" alt="Project 3" class="deck-image">
-                            <div class="deck-nav">
-                                <button class="deck-nav-btn prev-image"><i class="fas fa-chevron-left" style="font-size: 2rem;"></i></button>
-                                <button class="deck-nav-btn next-image"><i class="fas fa-chevron-right" style="font-size: 2rem;"></i></button>
-                            </div>
+                            <img src="images/opsysfunn.png" alt="Project 3" class="deck-image">
                         </div>
                     </div>
                 </div>
@@ -187,53 +209,45 @@
                     <div class="project-content">
                         <div class="project-text">
                             <div class="project-number">04</div>
-                            <h2>Invocation</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                            <h2>Think Fast</h2>
                             <div class="project-tech">
+                                <span>Dart</span>
+                                <span>C++</span>
+                                <span>CMake</span>
                                 <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
+                                <span>C</span>
+                                <span>Swift</span>
                             </div>
                             <div class="project-links">
                                 <a href="#" target="_blank"><i class="fas fa-external-link-alt" style="font-size: 2rem;"></i></a>
-                                <a href="https://github.com/VurnKambal/Invocation" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
+                                <a href="https://github.com/VurnKambal/Appdev" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
                             </div>
                         </div>
                         <div class="project-image-deck">
-                            <video src="videos/nft.mp4" class="deck-image" autoplay loop muted style="width: 100%; height: auto;"></video>
-                            <img src="images/image.png" alt="Project 4" class="deck-image" style="width: 100%;">
-                            <div class="deck-nav">
-                                <button class="deck-nav-btn prev-image"><i class="fas fa-chevron-left" style="font-size: 2rem;"></i></button>
-                                <button class="deck-nav-btn next-image"><i class="fas fa-chevron-right" style="font-size: 2rem;"></i></button>
-                            </div>
+                            <video src="videos/flutter.mp4" class="deck-image" controls playsinline></video>
                         </div>
                     </div>
                 </div>
 
-
+                <!-- Project 5 -->
                 <div class="project-slide">
                     <div class="project-content">
                         <div class="project-text">
-                            <div class="project-number">04</div>
-                            <h2>Numericals</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                            <div class="project-number">05</div>
+                            <h2>UBERStocksPrediction</h2>
                             <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
+                                <span>Python</span>
+
                             </div>
                             <div class="project-links">
                                 <a href="#" target="_blank"><i class="fas fa-external-link-alt" style="font-size: 2rem;"></i></a>
-                                <a href="https://github.com/Jaafary24/NumericalMethods-UBERStocksPrediction" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
+                                <a href="https://github.com/raffff14/Uberstock" target="_blank"><i class="fab fa-github" style="font-size: 2rem;"></i></a>
                             </div>
                         </div>
                         <div class="project-image-deck">
-                            <video src="videos/nft.mp4" class="deck-image" autoplay loop muted style="width: 100%; height: auto;"></video>
-                            <img src="images/image.png" alt="Project 4" class="deck-image" style="width: 100%;">
-                            <div class="deck-nav">
-                                <button class="deck-nav-btn prev-image"><i class="fas fa-chevron-left" style="font-size: 2rem;"></i></button>
-                                <button class="deck-nav-btn next-image"><i class="fas fa-chevron-right" style="font-size: 2rem;"></i></button>
-                            </div>
+                            <img src="images/uberstock.jpg" alt="Project 5" class="deck-image" style="width: 100%;">
+                             <img src="images/uberstock.png" alt="Project 5" class="deck-image" style="width: 100%;">
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -259,9 +273,9 @@
     <!-- Contact Section -->
     
     <!-- Footer -->
-    <footer>
+    <!-- <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
+    </footer> -->
 
     <script>
         const observer = new IntersectionObserver((entries) => {
@@ -354,8 +368,6 @@
             
             decks.forEach(deck => {
                 const images = deck.querySelectorAll('.deck-image');
-                const prevBtn = deck.querySelector('.prev-image');
-                const nextBtn = deck.querySelector('.next-image');
                 let currentIndex = 0;
 
                 // Function to update active image
@@ -363,30 +375,23 @@
                     images.forEach((img, index) => {
                         if (index === currentIndex) {
                             img.style.transform = 'translateY(0) rotate(0deg)';
-                            img.style.zIndex = '4';
-                            img.classList.add('active');
+                            img.style.zIndex = '3';
                         } else if (index < currentIndex) {
-                            img.style.transform = 'translateY(-30px) rotate(-3deg)';
+                            img.style.transform = 'translateY(-20px) rotate(-3deg)';
                             img.style.zIndex = '2';
-                            img.classList.remove('active');
                         } else {
-                            img.style.transform = 'translateY(30px) rotate(3deg)';
+                            img.style.transform = 'translateY(20px) rotate(3deg)';
                             img.style.zIndex = '1';
-                            img.classList.remove('active');
                         }
                     });
                 }
 
-                // Next image
-                nextBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex + 1) % images.length;
-                    updateActiveImage();
-                });
-
-                // Previous image
-                prevBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex - 1 + images.length) % images.length;
-                    updateActiveImage();
+                // Click on image to cycle through deck
+                images.forEach((img, index) => {
+                    img.addEventListener('click', () => {
+                        currentIndex = (currentIndex + 1) % images.length;
+                        updateActiveImage();
+                    });
                 });
 
                 // Click on image to view
