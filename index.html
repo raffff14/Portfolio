@@ -16,6 +16,9 @@
             <div class="logo">
                 <a href="#home" style="font-size: 2rem; font-weight: bold; color: var(--logo-color);"></a>
             </div>
+            <button class="hamburger" id="hamburger-menu" aria-label="Open navigation">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="#home" style="--i:4;">Home</a></li>
                 <li><a href="#about" style="--i:3;">About</a></li>
@@ -43,7 +46,7 @@
                 <p class="typed-text"> Full stack Developer</p>
                 <p class="hero-description">I craft elegant solutions through code and design, turning ideas into seamless digital experiences.</p>
                 <div class="cta-buttons">
-                    <a href="https://rafhaelmalabanan.jobs180.com/" target="_blank" class="cta-button primary">View Resume</a>
+                    <a href="./Malabanan-Rafhael-Cv.pdf" target="_blank" class="cta-button primary">View Resume</a>
                     <a href="#projects" class="cta-button secondary">See My Work</a>
                 </div>
             </div>
@@ -59,7 +62,7 @@
         <div class="about-content">
             <div class="about-text">
                 <p style="text-align: center;">I'm a fourth-year computer science student eager to deepen my knowledge in my field. I have experience with several languages like Python, Java, and JavaScript, SQL, 
-                    and have a background in cloud computing. During my internship at Kaizenaire, I worked as a Content Creator, SEO Specialist, and AI Specialist, gaining valuable industry experience.</p>
+                    and have a background in cloud computing. During Working at Kaizenaire, I worked as a Content Creator, SEO Specialist,Wordpress Developer, and AI Specialist, gaining valuable industry experience.</p>
                 <div class="about-grid">
                     <!-- Skills Section -->
                     <div class="skills">
@@ -72,6 +75,8 @@
                             <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-python"></i></li>
                             <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fas fa-database"></i></li>
                             <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fas fa-cloud"></i></li>
+                            <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fab fa-wordpress"></i></li>
+                            <li style="font-size: 4rem; list-style: none; width: 5.3rem; height: 5.3rem; display: flex; justify-content: center; align-items: center; animation: slideBottom .5s ease forwards;"><i class="fas fa-palette"></i></li>
                             <!-- Add more skills -->
                         </ul>
                     </div>
@@ -116,7 +121,7 @@
                             <li>
                                 <h4>Bachelor of Science in Computer Science</h4>
                                 <p>Holy Angel University</p>
-                                <p>Dean's Lister</p>
+                                <p>5x Dean Dean's Lister</p>
                                 <p>2021 – present</p>
                                 <p>Angeles, Philippines</p>
                             </li>
@@ -402,6 +407,14 @@
                     });
                 });
             });
+        });
+
+        // Hamburger menu for mobile nav
+        const hamburger = document.getElementById('hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
         });
     </script>
 </body>
