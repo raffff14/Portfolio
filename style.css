@@ -1163,6 +1163,179 @@ html {
     }
 }
 
+/* Content Portfolio Section Styles */
+.content-portfolio {
+    background: var(--background-color);
+    padding: 5rem 2rem;
+}
+
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.portfolio-categories {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.category-section {
+    margin-bottom: 4rem;
+}
+
+.category-section h3 {
+    color: var(--text-color);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.category-section h3 i {
+    color: var(--hover-color);
+    font-size: 1.5rem;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--card-bg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    aspect-ratio: 16/12;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.7) 50%,
+        transparent 100%
+    );
+    color: white;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+
+.portfolio-overlay h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.portfolio-overlay p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Responsive design for content portfolio */
+@media (max-width: 1200px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-portfolio {
+        padding: 3rem 1rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .category-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .portfolio-overlay {
+        padding: 1rem;
+    }
+    
+    .portfolio-overlay h4 {
+        font-size: 1.1rem;
+    }
+    
+    .portfolio-overlay p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-portfolio {
+        padding: 2rem 0.5rem;
+    }
+    
+    .image-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .portfolio-item {
+        aspect-ratio: 16/10;
+    }
+    
+    .category-section h3 {
+        font-size: 1.3rem;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
+
 /* --- General Mobile Improvements --- */
 @media (max-width: 480px) {
     section {
